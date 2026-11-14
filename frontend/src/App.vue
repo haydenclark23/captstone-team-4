@@ -18,6 +18,8 @@ async function callApi() {
 
     console.log('Davian')
     
+    console.log('Hayden')
+
     if (!response.ok) {
       throw new Error('API request failed')
     }
