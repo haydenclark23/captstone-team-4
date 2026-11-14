@@ -12,6 +12,7 @@ async function callApi() {
 
   try {
     const response = await fetch('/api/hello')
+    
     console.log('Mark')
 
     console.log('Braden')
