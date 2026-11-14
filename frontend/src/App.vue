@@ -14,6 +14,10 @@ async function callApi() {
     const response = await fetch('/api/hello')
     console.log('Mark')
 
+    console.log('Braden')
+
+    console.log('Davian')
+    
     if (!response.ok) {
       throw new Error('API request failed')
     }
