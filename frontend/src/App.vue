@@ -15,6 +15,8 @@ async function callApi() {
 
     console.log('Braden')
 
+    console.log('Davian')
+    
     if (!response.ok) {
       throw new Error('API request failed')
     }
