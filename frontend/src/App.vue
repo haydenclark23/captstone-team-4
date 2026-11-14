@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import BottomNavigation from './components/BottomNavigation.vue'
 
 const message = ref('')
 const loading = ref(false)
@@ -105,30 +106,7 @@ async function callApi() {
         </div>
       </v-container>
 
-      <v-footer app class="bottom-nav" color="transparent" elevation="0">
-        <v-row no-gutters class="nav-row">
-          <v-col class="nav-item active">
-            <v-icon size="20">mdi-home</v-icon>
-            <span>Home</span>
-          </v-col>
-          <v-col class="nav-item">
-            <v-icon size="20">mdi-calendar-text</v-icon>
-            <span>Events</span>
-          </v-col>
-          <v-col class="nav-item">
-            <v-icon size="20">mdi-account-group</v-icon>
-            <span>Meetings</span>
-          </v-col>
-          <v-col class="nav-item">
-            <v-icon size="20">mdi-hand-heart</v-icon>
-            <span>Resources</span>
-          </v-col>
-          <v-col class="nav-item">
-            <v-icon size="20">mdi-menu</v-icon>
-            <span>More</span>
-          </v-col>
-        </v-row>
-      </v-footer>
+      <BottomNavigation />
     </v-main>
   </v-app>
 </template>
@@ -297,33 +275,6 @@ async function callApi() {
   text-transform: none !important;
   background: #1a7ae0 !important;
   box-shadow: none !important;
-}
-
-.bottom-nav {
-  padding: 10px 8px 18px !important;
-  background: #1a1b1d !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
-}
-
-.nav-row {
-  max-width: 620px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.nav-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.7rem;
-  padding: 8px 4px;
-}
-
-.nav-item.active {
-  color: #f5f5f5;
 }
 
 @media (max-width: 420px) {
